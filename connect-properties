@@ -1,0 +1,20 @@
+{
+  "name": "person4",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "topics": "personb",
+    "connection.url": "jdbc:postgresql://localhost:5432/root?currentSchema=root",
+    "connection.user": "root",
+    "connection.password": "example",
+    "insert.mode": "insert",
+    "batch.size": "1",
+    "delete.enabled": "false",
+    "table.name.format": "person",
+    "pk.mode": "none",
+    "auto.create": "true",
+    "auto.evolve": "true"
+  }
+}
